@@ -1,0 +1,25 @@
+1. Sau khi chạy dòng express_orders.insert(0, "GE100-FAST") danh sách express_orders thay đổi như thế nào?
+=> Chèn thêm GE100-FAST vào đầu list
+
+2. Vì sao dòng sau sửa nhầm đơn hàng "GE101" thay vì sửa "GE102-WRONG"?
+=> Danh sách sau khi chèn là:  ['DE000-FAST', 'GE101', 'GE102-WORNG', 'GE103-CANCEL', 'GE104']
+
+3. Vì sao dòng express_orders.pop(3) không xóa đúng đơn hàng bị hủy?
+=> Xóa và trả về phần tử tại vị trí 3
+
+4. Nếu muốn xóa đúng đơn hàng "GE103-CANCEL", nên dùng remove() như thế nào?
+=>express_order.remove("GE103-CANCEL")
+
+5. Phương thức pop() không truyền index sẽ lấy phần tử ở đâu trong danh sách?
+=> Xóa và trả về phần tử tại chỉ mục (mặc định là phần tử cuối cùng).
+
+6. Vì sao dòng current_order = express_orders.pop() lấy sai đơn hàng đang giao?
+=> Do không truyền vào vị trí nên nó sẽ trả về vị trí cuối cùng, nhưng trong bài đơn hàng đang giao lại ở vị trí đầu tiên
+
+7. Muốn lấy đơn hàng đầu tiên trong danh sách ra để giao, cần viết lệnh như thế nào?
+=> current_order =  express_order.pop(0)
+
+8. Muốn chương trình cho ra kết quả đúng, cần sửa lại những dòng nào?
+=> 1. express_order[2] = "GE102-UPDATE" thay đổi vị trí từ 1 thành 2 do đã chèn thêm GE100-FAST vào đầu list
+   2. express_order.remove("GE103-CANCEL") để xóa đơn hàng thì nên dùng remove thay vì dùng pop như ban đầu
+   3. current_order =  express_order.pop(0) nên chèn thêm chỉ mục vị trí vào bên trong thay vì để trống tranh việc nó gọi sai vị trí
