@@ -5,11 +5,11 @@ express_order = ["GE101", "GE102-WORNG", "GE103-CANCEL"]
 express_order.append("GE104")
 
 # Chèn đơn hàng hỏa tốc vào đầu danh sách
-express_order.insert(0,"DE000-FAST")
+express_order.insert(0,"GE000-FAST")
 print("Danh sách sau khi chèn là: ", express_order)
 
 # Sửa mã đơn hàng bị nhập sai
-express_order[2] = "GE102-UPDATE"
+express_order[1] = "GE102-UPDATE"
 
 # Xóa đơn hàng bị khách hủy
 express_order.remove("GE103-CANCEL")
